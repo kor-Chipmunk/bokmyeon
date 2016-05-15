@@ -1,14 +1,22 @@
 class HomeController < ApplicationController
   def index
-    
+
   end
   
   def write
-    content = params[:content]
+    u = User.new
+    file = params[:pic]
+    u.avatar = file
     
-    post = Post.new
-    post.content = content 
-    post.save
+    # uploader = ThumbnailUploader.new
+    # uploader.store!(file)
+    
+    u.save
+    
+    posts = Post.new
+    posts.content = params[:content]
+    posts.user = u
+    posts.save
     
     redirect_to '/home/index'
   end
