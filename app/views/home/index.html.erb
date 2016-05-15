@@ -93,6 +93,10 @@
         
         read();
         
+        setInterval(function() {
+            read();
+        }, 5000);
+        
         var elementPosition = $('.background').offset();
     
         $(window).scroll(function(){
