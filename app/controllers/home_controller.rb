@@ -6,10 +6,10 @@ class HomeController < ApplicationController
   def write
     u = User.new
     file = params[:pic]
-    u.avatar = file
     
-    # uploader = ThumbnailUploader.new
-    # uploader.store!(file)
+    if file != nil
+      u.avatar = file
+    end
     
     u.save
     

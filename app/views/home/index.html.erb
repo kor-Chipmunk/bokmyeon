@@ -5,14 +5,14 @@
         <p>당신의 <b>추측</b>을 적어주세요!</p>
     </div>
     <div class="jumbotron form-group" style="text-align: center;">
-        <form mothod="POST" action="/home/write/" id="contentform" style="text-align: center;">
+        <form method="POST" action="/home/write/" id="contentform" style="text-align: center;" enctype="multipart/form-data">
             <div class="row">
             <textarea id="content" name="content" class="form-control" placeholder="100자 이내로 표현해 보세요!" rows="3" style="width: 100%;"></textarea>
             </div>
             <br>
             <div class="row">
                 <div class="col-md-3 col-sm-3 col-xs-4">
-                    <input type="file" name="pic" acceprt="image/*">
+                    <input type="file" name="pic" accept="image/*">
                 </div>
                 <button id="submitbtn" type="submit" class="btn btn-success col-md-2 col-sm-3 col-xs-4 col-md-offset-7 col-sm-offset-6 col-xs-offset-4">작성하기</button>
                 <!-- <button id="submitbtn" type="button" class="btn btn-success col-md-2 col-sm-3 col-xs-4 col-md-offset-10 col-sm-offset-9 col-xs-offset-8">작성하기</button> -->

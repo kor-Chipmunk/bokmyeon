@@ -44,8 +44,8 @@ class ThumbnailUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  def filename
-      [(0...8).map { (97 + rand(26)).chr }.join + '.' + file.extension] if original_filename.present?
-  end
+  # def filename
+  #     [(0...8).map { (97 + rand(26)).chr }.join + '.' + file.extension] if original_filename.present?
+  # end
 
 end

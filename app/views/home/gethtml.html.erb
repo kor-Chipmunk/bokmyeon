@@ -1,9 +1,11 @@
 <% @posts.each do |p| %>
     <div class="contents" style="background: #fff; border-radius: 5px; margin-bottom: 10px; padding: 5px; text-align: center; position: relative; overflow: hidden;">
-        <% if p.user.avatar.present? %>
-            <p><%= image_tag "/uploads/" + p.user.id.to_s + "/" + p.user.avatar_identifier.gsub('["', '').gsub('"]', ''), size: "50x50" %></p>
+        <h3>
+        <% if p.user.avatar_identifier != nil %>
+            <span><%= image_tag "/uploads/" + p.user.id.to_s + "/" + p.user.avatar_identifier.gsub('["', '').gsub('"]', ''), size: "50x50" %></span>
         <% end %>
-        <h3><%= p.content %></h3>
+        <%= p.content %>
+        </h3>
         <h6 style="float: right; margin-right: 15px;">날짜 : <%= p.created_at.in_time_zone("Asia/Seoul").strftime("%Y년%m월%d일 %H시%M분%S초") %></h6>
     </div>
 <% end %>
