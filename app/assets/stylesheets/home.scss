@@ -22,7 +22,7 @@ body {
   height: 100%;  
   opacity: .7; 
   z-index: -1;
-  background: url(mask_singer.jpg);
+  background: image-url("mask_singer.jpg");
   background-size: cover;
   
     -webkit-filter: blur(1px);
